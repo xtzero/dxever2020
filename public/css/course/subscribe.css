@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #efeff5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    color: #1097D8;
+}
+
+#unsubscribe {
+    margin-top: 20px;
+}
+#subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subscribe-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.subscribe-line>img {
+    width: 30px;
+    height: 30px;    
+}
+.subscribe-line>input {
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    border-bottom: solid 1px gray;
+    font-size: 15px;
+    text-align: center;
+}
+#phone {
+    width: 100%;
+}
+#verifyCode {
+    width: 60%;
+}
+.subscribe-line>* {
+    margin-left: 5px;
+}
+#sendCode {
+    width: 80px;
+    height: 25px;
+    font-size: 10px;
+    background-color: white;
+    padding: 5px 10px;
+    box-shadow: 1px 1px lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.subscribe-btn-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#subscribe-btn, #resubscribe-btn{
+    width: 120px;
+    height: 45px;
+    /* font-size: 13px; */
+    background-color: #189AD9;
+    padding: 5px 10px;
+    box-shadow: 1px 1px lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+.rule {
+    color: #189AD9;
+}
+.subscribe {
+    margin-top: 20px;
+}
+#resubscribe-btn {
+    margin-top: 10px;
+    background-color: #E74C3C;
+}
+.pointlogs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.tip {
+    border-left: solid 7px #1296DB;
+    padding-left: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.tip1 {
+    margin-top: 20px;
+}
+.log {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 1px;
+}
+.log-title {
+    margin-left: 10px;
+    font-size: 18px;
+}
+.log-title-time {
+    font-size: 13px;
+    color: gray;
+}
+.log-num {
+    margin-right: 10px;
+    font-size: 14px;
+}
+.log-inc {
+    color: #2ECC71;
+}
+.log-dec {
+    color: #E74C3C;
+}
+.getpoint-btn {
+    margin-right: 10px;
+    background-color: #189AD9;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+}
+.got {
+    background-color: #CCCCCC;
+}
+.topbanner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 30px;
+    background-color: #FFFBE6;
+    color: #5C3C08;
+    padding: 10px 5px;
+}
+

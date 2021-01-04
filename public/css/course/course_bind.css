@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #55609C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    font-size: 1.5em;
+    color: white;
+}
+.input {
+    border-style: none;
+    border-bottom: solid 2px white;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    margin-top: 20px;
+    font-size: 15px;
+    width: 60vw;
+}
+.commitbtn {
+    margin-top: 20px;
+    width: 50vw;
+    height: 44px;
+    border: solid 1px white;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.commitbtn:active {
+    background-color: rgba(255, 255, 255, 0.1);
+}

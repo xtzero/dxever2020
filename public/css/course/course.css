@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+
+#bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+#toolbar {
+    position: absolute;
+    width: calc(91% / 5 * 7 + 9%);
+    left: 9%;
+    height: 50px;
+    /*background-color: green;*/
+    display: flex;
+    flex-direction: row;
+}
+.userinfo, .timeinfo {
+    width: 45.5vw;
+    background-color: #efeff5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.studno, .studname {
+    font-size: 13px;
+}
+.timeinfo select {
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+#days{
+    position: absolute;
+    width: calc(91% / 5 * 7);
+    top: 50px;
+    height: 50px;
+    background-color: #F6F6F6;
+    left: 9%;
+}
+.days{
+    width: calc(100% / 7);
+    height: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 5px;
+    line-height: 20px;
+    /*outline: solid 1px forestgreen;*/
+}
+
+.days>span{
+    font-size: 0.8em;
+    display: inline-block;
+    width:100%;
+}
+
+#times{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 10%;
+    height: calc(100% - 50px);
+    background-color: #f6f6f6;
+}
+
+.times{
+    width: 100%;
+    /*height: calc(100% / 6);*/
+    height: 150px;
+    /*border: solid 1px blue;*/
+    text-align: center;
+}
+
+.classnum {
+    font-size: 18px;
+}
+
+.classnum-small {
+    font-size: 12px;
+}
+
+.times *{
+    width: 100%;
+}
+
+#maintable{
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    width: calc(90% / 5 * 7);
+    height: calc(100% - 50px);
+    background-color: #f6f6f6;
+}
+
+.maintable-cell{
+    position: relative;
+    width: calc(100% / 7);
+    height: 150px;
+    font-size: 10px;
+    float: left;
+    outline: solid white 0.5px;
+    background-color: #efeff5;
+    overflow: hidden;
+}
+
+div::-webkit-scrollbar {
+    display: none;
+}
+.maintable-cell *{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+
+.maintable-cell-classname{
+    /*font-size: 9px;*/
+    height: 50px;
+    overflow: scroll;
+    /*white-space:nowrap;text-overflow:ellipsis;word-break:break-all;overflow:scroll;*/
+}
+
+.maintable-cell-classroom{
+    font-size: 9px;
+    height: 30px;
+    overflow: scroll;
+}
+
+.maintable-cell-teachername{
+    font-size: 9px;
+    height: 40px;
+    overflow: scroll;
+}
+
+.maintable-cell-cell::-webkit-scrollbar {
+    display:none;
+}
+
+#emptyCell {
+    position: absolute;
+    width: 9%;
+    height: 50px;
+    left: 0;
+    top: 0px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #efeff5;
+    font-size: 13px;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#menuBtn{
+    position: absolute;
+    width: 9%;
+    height: 50px;
+    left: 0;
+    top: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: white;
+    font-size: 13px;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#menu{
+    position: absolute;
+    z-index: 100;
+    width: 91%;
+    height: 100px;
+    left: 9%;
+    top: 0px;
+    background-color: #323136;
+    display: none;
+}
+
+#closeMenu{
+    color: white;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+}
+
+#menu>div{
+    color: white;
+}
+
+.menu-half{
+    width: 50%;
+    height: 100%;
+    /*outline: solid 1px goldenrod;*/
+    float: left;
+    text-align: center;
+}
+
+.menu-half:nth-of-type(2){
+    padding-top: 10px;
+    border-left: solid #888 1px;
+}
+
+.menu-half:nth-of-type(3){
+    line-height: 100px;
+    border-left: solid #888 1px;
+    border-bottom: solid #888 1px;
+}
+
+#weekSelector{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    color: white;
+    text-align: center;
+    background-color: #323136;
+}
+
+#bindingJiaowuAccount{
+    position: absolute;
+    width: calc(91% / 2);
+    height: 150px;
+    left: calc(9% + 91% / 2);
+    top: 100px;
+    background-color: saddlebrown;
+    background-color: #323136;
+    padding-top: 10px;
+    display: none;
+}
+
+input{
+    border-style: none !important;
+    background-color: #323136 !important;
+    border-bottom: white solid 1px !important;
+    color: white;
+}
+
+#binding{
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+@keyframes openMenu{
+    from{
+        left: 0;
+        width: 0;
+        opacity: 0;
+    }
+    to{
+        left: 9%;
+        width: 91%;
+        opacity: 1;
+    }
+}
+
+@keyframes closeMenu{
+    from{
+        left: 9%;
+        width: 91%;
+        opacity: 1;
+    }
+    to{
+        left: 0;
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes openTwoMenu{
+    from{
+        top: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+    to{
+        top: 50px;
+        height: 150px;
+        opacity: 1;
+    }
+}
+
+@keyframes closeTwoMenu{
+    from{
+        top: 50px;
+        height: 150px;
+        opacity: 1;
+    }
+    to{
+        top: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+td{
+    overflow: scroll;
+}
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    /*display: flex;*/
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: all linear 0.5s;
+}
+.cover-alert {
+    position: relative;
+    width: 80vw;
+    min-height: 20vh;
+    border-radius: 20px;
+    background-color: white;
+    transition: all linear 0.2s;
+    display: none;
+}
+.cover-alert-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.cover-alert-content {
+    margin: 10px 0px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+.cover-alert-btn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    /*margin-top: 30px;*/
+    margin-bottom: 10px;
+}
+.cover-alert-btn:active {
+    background-color: #efeff5;
+}
+#terms, #weeks {
+    font-size: 13px;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none; /*去掉下拉箭头*/
+}
+.turnaround {
+    transition: all 1s linear;
+}
+
+.classtime {
+    font-size: 13px;
+}
